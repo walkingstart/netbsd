@@ -1,0 +1,334 @@
+!! Xft / font stuff
+Xft.autohint : 0
+Xft.lcdfilter : lcddefault
+Xft.rgba :       rgb
+Xft.hintstyle :  hintslight
+Xft.dpi :        100
+Xft.antialias :  1
+Xft.hinting : 1
+
+!! ===== xidle
+! ! drag pointer to lower left corner to lock screen
+xidle*position : sw
+! and leave it there for one second.
+xidle*delay    : 1
+! also lock screen after 5 minutes idle
+xidle*timeout  : 600
+
+! ! ===== xlock
+! ! actually turn the backlight off
+XLock.dpmsoff     : 1
+! plain white-on-black lock screen
+xlock.description : off
+xlock.echokeys    : off
+xlock.info        :
+xlock.background  : black
+xlock.foreground  : white
+xlock.mode        : blank
+xlock.username    : username: 
+xlock.password    : password: 
+xlock.font        : -misc-fixed-medium-r-normal-*-15-*-*-*-*-*-iso10646-1
+xlock.planfont    : -misc-fixed-medium-r-normal-*-13-*-*-*-*-*-iso10646-1
+
+! ===== xclock
+! digital clock in lower right-hand corner
+XClock*analog      : false
+XClock*twentyfour  : true
+XClock*padding     : 0
+XClock*geometry    : -4-4
+XClock*render      : false
+XClock*font        : -misc-fixed-bold-r-normal-*-13-*-*-*-*-*-iso10646-1
+XClock*height      : 12
+XClock*background  : dimgray
+XClock*foreground  : white
+XClock*borderWidth : 0
+
+!XTerm*font: -*-*-*-*-*-*-*-100-*-*-*-60-iso10646-*
+!XTerm*boldFont: -*-*-*-*-*-*-*-100-*-*-*-60-iso10646-*
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+!!! Foreground
+XTerm*foreground:       #d3d3d3
+XTerm*background:       #000000
+XTerm*cursorColor:  #ff0000
+
+XTerm*underlineColor : #dfaf8f
+XTerm*color0         : #3f3f3f
+XTerm*color1         : #cc9393
+XTerm*color2         : #7f9f7f
+XTerm*color3         : #d0bf8f
+XTerm*color4         : #6ca0a3
+XTerm*color5         : #dc8cc3
+XTerm*color6         : #93e0e3
+XTerm*color7         : #dcdccc
+XTerm*color8         : #000000
+XTerm*color9         : #dca3a3
+XTerm*color10        : #bfebbf
+XTerm*color11        : #f0dfaf
+XTerm*color12        : #8cd0d3
+XTerm*color13        : #dc8cc3
+XTerm*color14        : #93e0e3
+XTerm*color15        : #ffffff
+!!!Blacks
+!XTerm*color0:           #151515
+!XTerm*color8:           #505450
+!!!Reds
+!XTerm*color1:           #a60101
+!XTerm*color9:           #f99090
+!!!Greens
+!XTerm*color2:           #026802
+!XTerm*color10:          #a7e14b
+!!!Yellows
+!XTerm*color3:           #ab6e03
+!XTerm*color11:          #fddc01
+!!!Blues
+!XTerm*color4:           #4a5463
+!XTerm*color12:          #7d8794
+!!!Purples
+!XTerm*color5:           #9c3885
+!XTerm*color13:          #e628ba
+!!!Cyans
+!XTerm*color6:           #08bab0
+!XTerm*color14:          #74fff7
+!!!Whites
+!XTerm*color7:           #bbbbbb
+!XTerm*color15:          #ffffff
+
+
+
+XTerm*termName               : xterm-256color
+!XTerm.vt100.faceName: DejaVu Sans Mono:style=Book:antialias=false
+XTerm.vt100.faceName: xft:Hack
+XTerm.vt100.faceNameDoublesize: xft:WenQuanYi WenQuanYi Bitmap Song
+XTerm.vt100.faceSize: 16
+
+XTerm*locale:           true
+XTerm*utf8Title:        true
+!XTerm*menuLocale:       zh_CN.UTF-8
+XTerm*faceName: xft: Bitstream Vera Sans Mono:pixelsize=16
+!XTerm*faceName: DejaVu Sans Mono:size=16
+XTerm*faceNameDoublesize: xft:Wenquanyi bitmap song:pixelsize=16
+XTerm*eightBitOutput:   true
+XTerm*eightBitInput:    true
+XTerm*eightBitSelectTypes: true
+XTerm*wideChars:        true
+XTerm*utf8:             1
+XTerm.faceSize: 16
+Xcursor.theme: dmz
+Xcursor.size: 96
+
+! XTerm*font:              -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
+!XTerm*faceNameDoublesize:WenQuanYi Zen Hei:antialias=true:pixelsize=16
+
+XTerm*internalBorder:    10
+XTerm*loginShell:        true
+XTerm*scrollBar:         false
+XTerm*selectToClipboard: true
+XTerm*vt100.metaSendsEscape  : true
+! save ~10,000 lines of scrollback
+XTerm*v100.saveLines         : 10240
+! hide scrollbar
+XTerm*vt100.scrollBar        : false
+! terminal bell tells the window manager to raise urgent flag
+XTerm*vt100.bellIsUrgent     : true
+! no bold fonts - just use brighter colors
+XTerm*allowBoldFonts         : false
+! pressing a key automatically scrolls to the bottom
+XTerm*scrollKey              : true
+! don't allow terminal to go fullscreen
+XTerm*fullscreen             : never
+! clicking a line selects only from the current word forward
+XTerm*cutToBeginningOfLine   : false
+! and don't include a trailing newline in the selection!
+XTerm*cutNewline             : false
+! some black magic to change what characters XTerm considers "word delimiters"
+XTerm*charClass              : 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+! select word on two clicks
+XTerm*on2Clicks              : word
+! select whole line on three clicks
+XTerm*on3Clicks              : line
+! shift + left click to open selection in web browser
+XTerm*VT100*Translations     : #override Shift : exec-formatted("chrome --enable-unveil '%t'", PRIMARY)
+
+
+!!!URxvt
+
+!! black
+!*.color0:       #251f1f
+!*.color8:       #5e5e5e
+!
+!! red
+!*.color1:       #eb4509
+!*.color9:       #eb4509
+!
+!! green
+!*.color2:       #94e76b
+!*.color10:      #95e76b
+!
+!! yellow
+!*.color3:       #ffac18
+!*.color11:      #ffac18
+!
+!! blue
+!*.color4:       #46aede
+!*.color12:      #46aede
+!
+!! magenta
+!*.color5:       #e32c57
+!*.color13:      #e32c57
+!
+!! cyan
+!*.color6:       #d6dbac
+!*.color14:      #d6dbac
+!
+!! white
+!*.color7:       #efefef
+!*.color15:      #efefef
+!
+!!!! special
+!*.foreground: #93a1a1
+!*.background: #141c21
+!*.cursorColor: #afbfbf
+!
+URxvt.letterSpace: 0
+URxvt.lineSpace: 1
+URxvt.geometry: 92x24
+URxvt.internalBorder: 12
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+
+URxvt.font: 		xft:inconsolata:size=14
+URxvt.cursorColor:	red
+
+!!!try new color
+*background: #1d2021
+! *background: #282828
+! soft contrast: *background: #32302f
+ *foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+! *color2:  #98971a
+! *color10: #b8bb26
+! Less toxic Green
+*color2:  #b5bd68
+*color10: #4D6E4E
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
+
+
+ urxvtwhite*depth: 32
+ urxvtwhite*background: rgba:fb00/f100/c700/f500
+ urxvtwhite.foreground: #3c3836
+
+ !Black
+ urxvtwhite.color0:     #fbf1c7
+ urxvtwhite.color8:     #928374
+ !!Red
+ urxvtwhite.color1:     #cc241d
+ urxvtwhite.color9:     #9d0006
+ !!Green
+ urxvtwhite.color2:     #98971a
+ urxvtwhite.color10:    #79740e
+ !!Yellow
+ urxvtwhite.color3:     #d79921
+ urxvtwhite.color11:    #b57614
+ !!Blue
+ urxvtwhite.color4:     #458588
+ urxvtwhite.color12:    #076678
+ !!Magenta
+ urxvtwhite.color5:     #b16286
+ urxvtwhite.color13:    #8f3f71
+ !!Cyan
+ urxvtwhite.color6:     #899d6a
+ urxvtwhite.color14:    #427b58
+ !!White
+ urxvtwhite.color7:     #7c6f64
+ urxvtwhite.color15:    #3c3836
+
+
+!! Common Keybinds for Navigations
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+
+!! Copy Paste & Other Extensions
+URxvt.perl-lib: ~/.urxvt
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,selection-to-clipboard
+URxvt.clipboard.autocopy: true
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.urlLauncher: firefox
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+
+
+!#################################
+!#! ROFI Color theme
+!#################################
+! !rofi.modi: window, drun, run 
+! !rofi.fullscreen: true
+! !rofi.padding: 370
+! rofi.separator-style: none
+! rofi.hide-scrollbar: true
+! !rofi.bw: 6
+! rofi.width: 700
+! rofi.lines: 11
+! rofi.position:center
+! rofi.font: Hack-regular 14
+! rofi.color-enabled: true
+! !rofi.color-window: #393939, #393939, #268bd2
+! !rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
+! !rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
+! !rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
+ rofi.color-window: argb:d42e3440, argb:00000000, #1aa662
+ rofi.color-normal: argb:10000000, #84d498, argb:00000000, #23ff77, #2e3440
+ rofi.color-active: argb:00000000, #50fa7b, argb:00000000, #85fa86, #2e3440
+ rofi.color-urgent: argb:00000000, #1aa662, argb:00000000, #1aa662, #2e3440
+
+
+
+rofi.color-enabled: true
+!rofi.color-window:  #000, #000, #000
+!rofi.color-normal:  #111, #819396, #222, #008ed4, #ffffff
+!rofi.color-active:  #002b37, #008ed4, #003643, #008ed4, #66c6ff
+!rofi.color-urgent:  #002b37, #da4281, #003643, #008ed4, #890661
+
+rofi.fake-transparency: true
+rofi.lines:     11
+rofi.bw:        0
+rofi.opacity:       "10"
+rofi.hide-scrollbar:    true
+rofi.width:     600
+
